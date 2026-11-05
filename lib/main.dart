@@ -28,12 +28,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Nature Explorer',
-          style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.greenAccent
-          ),
+          'Nature Explorer'
         ),
       ),
       body: SingleChildScrollView(
@@ -42,11 +37,28 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image.network('https://picsum.photos/id/10/250/200'),
               Text(
-                'Image Explorer',
+                'A Peaceful Nature Escape',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text(
+                'Discover, Explore, Reconnect',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 5,),
+              Text(
+                'Discover the beauty of nature through breathtaking landscapes, peaceful forests, and stunning mountains views. Explorer remarkable destinations, enjoy the fresh air, and reconnect with the natural world. From quiet lakes to scenic trails, every journey offers a new experience. Let nature inspire you next advanture and create unforgettable memories along the way.',
+                style: TextStyle(
+                  fontSize: 14,
+                  height: 1.5,
                 ),
               ),
               SizedBox(height: 20,),
@@ -54,16 +66,10 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    _galleryImage('https://picsum.photos/id/10/200/300'),
+                    _galleryImage('https://picsum.photos/id/10/150/300'),
+                    _galleryImage('https://picsum.photos/id/19/150/300'),
+                    _galleryImage('https://picsum.photos/id/37/150/300'),
                   ],
-                ),
-              ),
-              SizedBox(height: 20,),
-              Text(
-                'A Peaceful Nature Escape',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -77,9 +83,6 @@ class HomeScreen extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: Image.network(
         url,
-        height: 250,
-        width: 150,
-        fit: BoxFit.cover,
       ),
     );
   }
