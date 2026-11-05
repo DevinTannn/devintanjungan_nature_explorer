@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network('https://picsum.photos/id/10/250/200'),
+              Image.network('https://picsum.photos/id/10/300/300'),
               Text(
                 'A Peaceful Nature Escape',
                 style: TextStyle(
